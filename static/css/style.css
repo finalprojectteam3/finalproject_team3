@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'open sans';
+}
+
+.title{
+    color:red;
+    font-size: 30px;
+    text-align: center;    
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 100%;
+    background: #EF3B36;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, hsla(0, 0%, 100%, 0.616), hsla(2, 85%, 57%, 0.322)), url(../images/emoji_background1.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, hsla(0, 0%, 100%, 0.603), hsla(2, 85%, 57%, 0.521)), url(../images/emoji_background1.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:relative;
+}
+
+header .text-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align:  center;
+    flex-direction: column;
+}
+
+header h1{
+    font-size: 50px;
+    color: white;
+}
+
+header p{
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#container{
+    margin: 0px auto;
+    width:500px;
+    height:375px;
+    border:10px #333 solid;
+}
+
+#videoElement{
+    width:500px;
+    height:375px;
+    background-color: #666;
+}
+
+
+/*footer*/
+.container-footer{
+    border: none;
+    text-align: center;
+    color: #ccc;
+    background: gray;
+
+}

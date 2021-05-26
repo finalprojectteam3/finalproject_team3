@@ -1,4 +1,6 @@
-var video=document.querySelector("#videoElement");
+let canvas =document.querySelector("#canvas")
+let context=canvas.getContext("2d");
+let video=document.querySelector("#videoElement");
 
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
@@ -7,3 +9,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         video.play();
     });
 }
+
+document.getElementById("snap").addEventListener("click", () =>{
+    context.drawImage(video,0,0,640,480);
+});

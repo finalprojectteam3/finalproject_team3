@@ -20,17 +20,28 @@
     <header>
         <section class="text-header">
             <h1>Final Project</h1>                    
-            <p><a class="btn btn-dark btn-lg" href="/" role="button">Capture</a></p>
+            <p><a id="snap" class="btn btn-dark btn-lg" role="button">Capture</a></p>
         </section>e
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-1.97,137.66 C337.18,175.16 351.85,21.20 499.72,142.59 L500.27,150.48 L-1.41,153.45 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path></svg></div>
     </header>
     <main>
-        <!-- News -->
-        <div id="container">
-            <video id="videoElement" autoplay>
-            </video>
-        </div>
-               
+        <!-- Video -->
+        <div class="row">
+            <div class="col-6">
+                <div id="container">
+                    <video id="videoElement" autoplay></video>
+                </div>
+            </div>
+            <div class="col-6">
+                <div id="container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div> 
+        </div>  
+        <div>
+            <p></p>
+            <p></p>
+        </div>    
     </main>
     <footer>
         <div class="container-footer">

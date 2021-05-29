@@ -1,6 +1,6 @@
 # finalproject_team3
 
-We will be training a machine learning classification algorythm, that will be trained on 
+We will be training a machine learning classification algorythm, that will be trained on facial recognition.
 
 
 kaggle datasets download -d msambare/fer2013 

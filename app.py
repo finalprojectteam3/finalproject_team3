@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, Response
+from flask import Flask, render_template, redirect
 
 # Create an instance of Flask
 app = Flask(__name__)
@@ -9,13 +9,10 @@ def home():
 
     return render_template("index.html")
 
+@app.route("/about")
+def about():
 
-# Route that will trigger the capture function
-@app.route("/capture")
-def capture():
-
-    # Redirect back to home page
-    return redirect("/")
+    return render_template("about.html" )
 
 
 if __name__ == "__main__":

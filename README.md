@@ -24,7 +24,7 @@ The task is to categorize each face based on the emotion shown in the facial exp
 
 ## Aplications
 
-* HTML/CSS
+* HTML/CSS/Bootstrap
 * Flask
 * p5.js
 * ml5.js

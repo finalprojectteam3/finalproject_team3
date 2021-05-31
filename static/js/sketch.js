@@ -8,7 +8,7 @@ var options = {
 let video;
 // For displaying the label
 let label = "waiting...";
-let Prediction;
+let Prediction= 0.00;
 // The classifier
 let classifier;
 let modelURL = 'https://teachablemachine.withgoogle.com/models/y4t6Uekee/';
@@ -20,7 +20,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(640, 520)
+  createCanvas(640, 500)
   // Create the video
   video = createCapture(VIDEO);
   video.hide();
@@ -34,16 +34,20 @@ function classifyVideo() {
 }
 
 function draw() {
-  background(0);
+  background(200);
   // Draw the video
-  image(video, 0, 0);
+  image(video, 0, 0,300, 300);
   filter(GRAY);
   // STEP 4: Draw the label
-  
   textSize(32);
   textAlign(CENTER);
-  fill(255);
-  text(label, width / 2, height - 16);
+  fill('blue');
+  text(label, width / 2, height - 90);
+  perc= Prediction;
+  textSize(32);
+  textAlign(CENTER);
+  fill('yellow');
+  text(Prediction, width / 2, height- 40);
   // Pick an emoji, the "default" is train
   let emoji = "";
   if (label == "angry") {
@@ -62,10 +66,9 @@ function draw() {
     emoji = "🙀";
   }
    
-
   // Draw the emoji
-  textSize(256);
-  text(emoji, width / 2, height / 2);
+  textSize(250);
+  text(emoji, 485, height / 2);
 }
 
 // STEP 3: Get the classification!
@@ -78,6 +81,6 @@ function gotResults(error, results) {
   // Store the label and classify again!
   label = results[0].label;
   Prediction=results[0].confidence;
-  console.log(Prediction);
+  /*console.log(Prediction);*/
   classifyVideo();
 }

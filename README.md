@@ -10,10 +10,10 @@ Emojify is great way to learn about expressions that can help people communicate
 
 ## Team Members
     
-    * Alciluz Gomez
-    * Dan Larson
-    * Phillip Ogborn
-    * Altricia Latimer
+* Alciluz Gomez
+* Dan Larson
+* Phillip Ogborn
+* Altricia Latimer
 
 ## Data Story
 
@@ -25,11 +25,12 @@ The task is to categorize each face based on the emotion shown in the facial exp
 
 ## Aplications
 
-    HTML/CSS
-    P5.js
-    ML5
+* HTML/CSS
+* Flask
+* p5.js
+* ml5.js
 
 ## Host application
-    Heroku
+* Heroku
 
 ## Project

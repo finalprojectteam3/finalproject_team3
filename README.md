@@ -17,7 +17,7 @@ Emojify is great way to learn about expressions that can help people communicate
 
 ## Data Story
 
-We will be training a machine learning classification algorythm, that will be trained on 
+We will be training a machine learning classification algorythm, that will be trained on facial recognition.
 [Kaggle FER-2013](https://www.kaggle.com/msambare/fer2013?)
 
 The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centered and occupies about the same amount of space in each image.

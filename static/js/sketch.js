@@ -18,7 +18,6 @@ function preload() {
   classifier = ml5.imageClassifier(modelURL + 'model.json', options);
 }
 
-
 function setup() {
   createCanvas(640, 500)
   // Create the video
@@ -80,7 +79,7 @@ function gotResults(error, results) {
   }
   // Store the label and classify again!
   label = results[0].label;
-  Prediction=results[0].confidence;
+  Prediction=(results[0].confidence*100).toFixed(2);
   /*console.log(Prediction);*/
   classifyVideo();
 }

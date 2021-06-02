@@ -38,7 +38,7 @@ function draw() {
   background(200);
   // Draw the video
   image(video, 0, 0,300, 300);
-  filter(GRAY);
+  // filter(GRAY);
   // label
   textSize(32);
   textAlign(CENTER);
@@ -60,7 +60,7 @@ function draw() {
   } else if (label == "disgust") {
     emoji = "🤢";
   } else if (label == "fear") {
-    emoji = "😥";
+    emoji = "😱";
   } else if (label == "neutral") {
     emoji = "🤖";
   } else if (label == "suprised") {

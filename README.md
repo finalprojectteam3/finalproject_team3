@@ -2,7 +2,7 @@
 
 ![face.png](static/images/dataset-cover.png)
 
-## Learn facial expresion from and image
+## Emojify Facial Recognition​ with Machine Learning Classifier
 
 Facial Expression is something that people have to interpret as they interact with others around them. Misinterpretation can lead to breakdowns in communication or missed opportunities to come to an understanding in general. This can be especially difficult for people who are trying to communicate in a language that is foreign to them. Another aspect of difficulty, lives in the world of the deaf or hard of hearing, as they rely heavily on another person’s facial expression to glean meaning to communicate effectively. Having nonverbal cue understanding is an essential skill that we all have to learn.
 Also, companies are relying on non-verbal communication to uncover the needs or wants of their customers, whether or not a product or service is worth investing in to make a profit and to stay ahead of their competitors. 
@@ -24,6 +24,7 @@ The task is to categorize each face based on the emotion shown in the facial exp
 
 ## Aplications
 
+* Teachable Machine with Google.
 * HTML/CSS/Bootstrap
 * Flask
 * p5.js
@@ -33,3 +34,4 @@ The task is to categorize each face based on the emotion shown in the facial exp
 * Heroku
 
 ## Project
+![screenshot1.png](images/screenshot1.png)

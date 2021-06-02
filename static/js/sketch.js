@@ -6,28 +6,30 @@ var options = {
 
 // The video
 let video;
+
 // For displaying the label
 let label = "waiting...";
 let Prediction= 0.00;
+
 // The classifier
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/y4t6Uekee/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/tLaj0gCrw/';
 
-// STEP 1: Load the model!
+//Load the model
 function preload() {
   classifier = ml5.imageClassifier(modelURL + 'model.json', options);
 }
 
 function setup() {
   createCanvas(640, 500)
-  // Create the video
+  // Init video
   video = createCapture(VIDEO);
   video.hide();
-  // STEP 2: Start classifying
+  // Start classifying
   classifyVideo();
 }
 
-// STEP 2 classify the videeo!
+// classify the videeo!
 function classifyVideo() {
   classifier.classify(video, gotResults);
 }
@@ -37,7 +39,7 @@ function draw() {
   // Draw the video
   image(video, 0, 0,300, 300);
   filter(GRAY);
-  // STEP 4: Draw the label
+  // label
   textSize(32);
   textAlign(CENTER);
   fill('blue');
@@ -47,7 +49,7 @@ function draw() {
   textAlign(CENTER);
   fill('yellow');
   text(Prediction, width / 2, height- 40);
-  // Pick an emoji, the "default" is train
+  // Pick an emoji
   let emoji = "";
   if (label == "angry") {
     emoji = "🤬";
@@ -70,7 +72,7 @@ function draw() {
   text(emoji, 485, height / 2);
 }
 
-// STEP 3: Get the classification!
+// Get the classification
 function gotResults(error, results) {
   // Something went wrong!
   if (error) {

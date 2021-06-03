@@ -12,7 +12,6 @@ We will be training a machine learning classification algorythm, that will be tr
     
 * Alciluz Gomez
 * Dan Larson
-* Phillip Ogborn
 * Altricia Latimer
 
 ## Data Story
@@ -26,7 +25,7 @@ The task is to categorize each face based on the emotion shown in the facial exp
 
 * Teachable Machine with Google.
 * HTML/CSS/Bootstrap
-* Flask
+* JavaScript D3.js
 * p5.js
 * ml5.js
 

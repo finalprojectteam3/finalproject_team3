@@ -12,18 +12,58 @@ let label = "waiting...";
 let Prediction= 0.00;
 
 // The classifier
+let selectedOption="Test Model";
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/tLaj0gCrw/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/XQKyP5naQ/';
+console.log(selectedOption);
+console.log(modelURL);
 
 //Load the model
 function preload() {
   classifier = ml5.imageClassifier(modelURL + 'model.json', options);
+  console.log(selectedOption);
+}
+
+// List of groups (here I have one group per column)
+var modelset = ["Test Model", "Own Model"]
+
+// add the options to the button
+d3.select("#selectButton")
+  .selectAll('myOptions')
+   .data(modelset)
+  .enter()
+  .append('option')
+  .text(function (d) { return d; }) // text showed in the menu
+  .attr("value", function (d) { return d; }) // corresponding value returned by the button
+
+
+// When the button is changed, change the link to the dataset
+d3.select("#selectButton").on("change", function(d) {
+  // recover the option that has been chosen
+  selectedOption = d3.select(this).property("value")
+  console.log(selectedOption)
+  changeUrl(selectedOption)
+})
+
+// Function to change the URL of the model set
+function changeUrl (selectedOption) {
+  label = "waiting...";
+  Prediction= 0.00;
+  if (selectedOption === "Test Model") {
+    modelURL = 'https://teachablemachine.withgoogle.com/models/XQKyP5naQ/';
+    preload();
+  }else {
+    modelURL = 'https://teachablemachine.withgoogle.com/models/tLaj0gCrw/';
+    preload();
+  }
+  console.log(modelURL);
 }
 
 function setup() {
-  createCanvas(640, 500)
+  createCanvas(640, 500);
   // Init video
   video = createCapture(VIDEO);
+  video.size(48,48);
   video.hide();
   // Start classifying
   classifyVideo();
@@ -38,32 +78,34 @@ function draw() {
   background(200);
   // Draw the video
   image(video, 0, 0,300, 300);
-  // filter(GRAY);
+  if (selectedOption === "Test Model"){
+    filter(GRAY);
+  }
   // label
   textSize(32);
   textAlign(CENTER);
   fill('blue');
-  text(label, width / 2, height - 90);
+  text(label, width / 2, height - 100);
   perc= Prediction;
   textSize(32);
   textAlign(CENTER);
   fill('yellow');
-  text(Prediction, width / 2, height- 40);
+  text(Prediction, width / 2, height- 50);
   // Pick an emoji
   let emoji = "";
-  if (label == "angry") {
+  if (label === "angry") {
     emoji = "🤬";
-  } else if (label == "happy") {
+  } else if (label === "happy") {
     emoji = "😄";
-  } else if (label == "sad") {
+  } else if (label === "sad") {
     emoji = "😿";
-  } else if (label == "disgust") {
+  } else if (label === "disgust") {
     emoji = "🤢";
-  } else if (label == "fear") {
+  } else if (label === "fear") {
     emoji = "😱";
-  } else if (label == "neutral") {
+  } else if (label === "neutral") {
     emoji = "🤖";
-  } else if (label == "suprised") {
+  } else if (label === "suprised") {
     emoji = "🙀";
   }
    

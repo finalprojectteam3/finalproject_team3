@@ -30,7 +30,7 @@ The task is to categorize each face based on the emotion shown in the facial exp
 * ml5.js
 
 ## Host application
-* Heroku
+* Heroku: [Heroku](https://emoji-app-ucf.herokuapp.com/)
 
 ## Project
 ![screenshot1.png](images/screenshot1.png)

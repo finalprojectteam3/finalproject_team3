@@ -9,7 +9,7 @@ Also, companies are relying on non-verbal communication to uncover the needs or 
 Emojify is great way to learn about expressions that can help people communicate in a non-traditional way that provides some comfort for people just learning about human expressions, app developers or companies looking to update the chat box options that they currently have in place. We will be performing a deep dive of existing data using machine learning.
 We will be training a machine learning classification algorythm, that will be trained on facial recognition.
 
-[presentation.pdf](Presentation - Final UCF Project.pdf)
+[presentation.pdf](https://github.com/finalprojectteam3/finalproject_team3/blob/main/Proposal%20for%20Team%203%20Final%20Project.docx)
 
 ## Team Members
     

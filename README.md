@@ -8,6 +8,9 @@ Facial Expression is something that people have to interpret as they interact wi
 Also, companies are relying on non-verbal communication to uncover the needs or wants of their customers, whether or not a product or service is worth investing in to make a profit and to stay ahead of their competitors. 
 Emojify is great way to learn about expressions that can help people communicate in a non-traditional way that provides some comfort for people just learning about human expressions, app developers or companies looking to update the chat box options that they currently have in place. We will be performing a deep dive of existing data using machine learning.
 We will be training a machine learning classification algorythm, that will be trained on facial recognition.
+
+[presentation.pdf](Presentation - Final UCF Project.pdf)
+
 ## Team Members
     
 * Alciluz Gomez
